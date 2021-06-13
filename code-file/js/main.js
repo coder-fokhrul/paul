@@ -18,8 +18,5 @@ $('.menu-list a, scroll-button a').on('click', function(){
 });
 
 
-//WOW Plugin
-new WOW().init();
-
 //MixitUp
 var mixer = mixitup('.grid-gallery');
