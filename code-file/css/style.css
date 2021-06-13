@@ -1,0 +1,509 @@
+/*===================
+
+Template Name: Paul Lapkin
+Author: Fokhrul
+Template URI:
+Version: 
+Description: A simple site for learning purpose.
+
+====================*/
+
+/*===================
+
+CSS Index
+---------
+1. Google Fonts
+2. Common Setting
+3. Reusable Components
+4. HERO SECTION
+5. About Section
+6. Work Process Section
+7. Work Experience
+8. Gallery Section
+9. Singature Section
+9. Contact Section
+10. Fotter
+
+====================*/
+
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Noto+Serif:wght@700&display=swap');
+
+/* Common Setting */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Libre Franklin', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-weight: normal;
+    font-size: 62.5%;
+    color: #000;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.fix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin: .5rem 0;
+}
+
+h1::after{
+    content: '';
+    height: .2rem;
+    width: 100%;
+    background: #fff;
+    display: block;
+}
+
+h1::before{
+    content: '';
+    height: .2rem;
+    width: 100%;
+    background: #fff;
+    display: block;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 2rem;
+    color: #222;
+}
+
+p{
+    margin: 2rem 0;
+    color:#222;
+    text-transform: capitalize;
+}
+
+/*Reusable Components*/
+
+.box{
+    max-width: 110rem;
+    margin: auto;
+}
+
+section{
+    padding: 12rem 0;
+}
+
+.button-design{
+    width: 20rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #000;
+    border: .2rem solid #000;
+    text-transform: capitalize;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.5rem 0;
+    transition: all .3s;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/*=====TOP SECTION=====*/
+
+#top{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(img/cover.jpg) no-repeat center / cover;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav{
+    padding: 3rem 0;
+}
+
+.logo{
+    float: left;
+}
+
+.menu{
+    float: right;
+}
+
+.menu-icon a i {
+    color: #fff;
+    font-size: 4.5rem;
+    border: .1rem solid  #fff ;
+}
+
+.middle-tex-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.middle-tex-box span{
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.scroll-button{
+    position: absolute;
+    bottom: 3.5rem;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+
+.scroll-button a i{
+    position: relative;
+    color: #fff;
+    font-size: 4rem;
+    animation: 1s arrow infinite ease-in-out;
+}
+
+/*Animation*/
+
+@keyframes arrow {
+    0% {
+        top:1rem;
+    }
+
+    50% {
+        top:3rem;
+    }
+
+    100% {
+        top:1rem;
+    }
+}
+
+/*MENU ITEMS*/
+
+.menu-box{
+    width: 0;
+    height: 100vh;
+    background: rgba(0,0,0,0.70);
+    position: fixed;
+    top:0;
+    left:0;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.cross-btn a i{
+    color:#fff;
+    font-size: 4rem;
+    position: absolute;
+    top:9rem;
+    right: 11.5rem;
+    border: .3rem solid #fff;
+}
+
+.menu-list{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.menu-list ul li a{
+    color:#fff;
+    font-size: 2.5rem;
+    text-decoration: none;
+    display: inline-block;
+    margin: .5rem;
+}
+
+.menu-list ul li{
+    list-style-type: none;
+}
+
+/*Sticky Menu*/
+
+nav.uk-sticky-fixed{
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0!important;
+    left: 0;
+    padding: .8rem;
+}
+
+/*=====ABOUT SECTION=====*/
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5rem;
+}
+
+.paul{
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.hire-button .button-design{
+    border-color: #ff2b4a;
+    background-color: #ff2b4a;
+    color:#fff
+}
+
+.hire-button .button-design:hover{
+    background: transparent;
+    color: #ff2b4a;
+}
+
+/*Work Process Section*/
+
+#work-process{
+    background-color: #bfbcbc;
+}
+
+.process-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+    text-align: center;
+}
+
+.process-grid-item{
+    background: #000;
+    text-transform: uppercase;
+    padding: 5rem 2rem;
+}
+
+.process-grid-item:nth-child(1){
+    background-color: #10c6fc;
+}
+
+.process-grid-item:nth-child(2){
+    background-color: #835aeb;
+}
+
+.process-grid-item:nth-child(3){
+    background-color: #002453;
+}
+
+.process-grid-item:nth-child(4){
+    background-color: #5d2bff;
+}
+
+.precess-icon{
+    margin: 2rem;
+}
+
+.precess-icon i {
+    font-size: 4rem;
+}
+
+/* WORK Experience Section*/
+
+#work{
+    background: url(img/edu.jpg) no-repeat center / cover;
+}
+
+.grid-work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.grid-work-item{
+    background: rgba(0,0,0,0.75);
+    padding: 4.5rem;
+    color: white;
+}
+
+.grid-work-item p {
+    color: #fff;
+}
+
+.job{
+    margin: 1rem 0;
+}
+
+.job span{
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.job p{
+    margin-top: 0;
+}
+
+hr{
+    border: 1px solid red;
+}
+
+/*Gallery Section*/
+
+.grid-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .5rem;
+}
+
+.grid-gallery img{
+    width: 100%;
+    height: 30rem;
+}
+
+.grid-gallery-img:nth-child(5){
+    grid-column: 1/3;
+}
+
+.gallery-button{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.gallery-button button{
+    background: #fff;
+    color: #000;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: 1px solid #5d2bff;
+    margin-bottom: 1rem;
+}
+
+.section-title h2 {
+    color: #000;
+}
+
+/*Singature Section*/
+
+.grid-signature-box{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:1rem;
+}
+
+#signature{
+    background: #64cbc0;
+}
+
+.sing-grid-item p{
+    color: #fff;
+    width: 90%;
+}
+
+button.mixitup-control-active{
+    color: #ff2b4a;
+    border-color: #ff2b4a;
+}
+
+/*Contact Section*/
+
+#contact{
+    background: url(img/contact.jpg) no-repeat center / cover;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.contact-grid-item:nth-child(1){
+    background: #fff;
+    padding: 3rem;
+    height: 53rem;
+}
+
+
+form input[type="text"],
+form input[type="email"]{
+    border: .3rem solid #000;
+    padding: 1rem;
+    color: #000;
+    background: transparent;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+form textarea{
+    border: .3rem solid #000;
+    background: transparent;
+    width: 100%;
+    margin: 1rem 0;
+    height: 14rem;
+}
+
+form input[type="submit"]{
+    padding: 1rem 1.5rem;
+    color: #000;
+    background: #ff2b4a;
+    border: .2rem solid #000;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover{
+    color:#fff
+}
+
+.submit{
+    text-align: right;
+    margin-bottom: .5rem;
+}
+
+.nested-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+.nested-grid-item{
+    background: #fff;
+    padding: 2rem;
+}
+
+.contact-grid-item h2 {
+    color: #000;
+}
+
+/*FOOTER*/
+
+#footer{
+    background-color: #222222;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.copy-right a{
+    color: #ff2b4a;
+    text-decoration: none;
+}
+
+.social-icon ul li{
+    display: inline-block;
+    padding: 2.5rem 1rem;
+}
+
+.social-icon ul li i{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.social-icon ul li i:hover{
+    color: #000;
+}
